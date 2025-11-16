@@ -12,4 +12,6 @@ public interface ClientService {
     List<ClientDto> getAllClients();
 
     ClientDto updateClient(Long clientId, ClientDto updatedClient);
+
+    void deleteClient(Long clientId);
 }

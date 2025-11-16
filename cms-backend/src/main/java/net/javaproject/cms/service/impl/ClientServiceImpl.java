@@ -47,12 +47,20 @@ public class ClientServiceImpl implements ClientService {
     //if that client with given Id is not present in DB, then throw Exception
     @Override
     public ClientDto updateClient(Long clientId, ClientDto updatedClient) {
-        Client client =  clientRepository.findById(clientId).orElseThrow(() -> new ResourceNotFoundException("Employee doesn't exist with given id: " + clientId));
+        Client client =  clientRepository.findById(clientId).orElseThrow(() -> new ResourceNotFoundException("Client doesn't exist with given id: " + clientId));
         client.setFirstName(updatedClient.getFirstName());
         client.setLastName(updatedClient.getLastName());
         client.setEmail(updatedClient.getEmail());
 
         Client updatedClientObj = clientRepository.save(client); //save method=save and update operation
         return ClientMapper.mapToClientDto(updatedClientObj);
+    }
+
+    //delete client by ID-if client with givenID doesn't exist, throw exception
+    @Override
+    public void deleteClient(Long clientId) {
+        Client client =  clientRepository.findById(clientId).orElseThrow(() -> new ResourceNotFoundException("Client doesn't exist with given id: " + clientId));
+
+        clientRepository.deleteById(clientId);
     }
 }
