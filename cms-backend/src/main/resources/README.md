@@ -21,3 +21,9 @@ passing two params- entity type, primary key type-Long id
 
 5)ClientMapper class - 
 used to map cliententity to client dto and clientdto to cliententityy(JPA entity)
+
+6)FLOW OF PROJECT-
+POSTMAN  -----> DTO --> C0NTROLLER LAYER --> SERVICE LAYER --> REPOSITORY LAYER
+
+7)ClientServiceImpl-
+@service-tells springcontainer to create spring bean for this class

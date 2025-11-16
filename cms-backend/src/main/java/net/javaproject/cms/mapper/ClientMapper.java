@@ -5,9 +5,8 @@ import net.javaproject.cms.entity.Client;
 
 public class ClientMapper {
 
-    // Map from Entity → DTO
+    // Map to transfer data from Entity → DTO
     public static ClientDto mapToClientDto(Client client) {
-        if(client == null) return null; // optional null check
         return new ClientDto(
                 client.getId(),
                 client.getFirstName(),
@@ -16,14 +15,13 @@ public class ClientMapper {
         );
     }
 
-    // Map from DTO → Entity
-    public static Client mapToClientEntity(ClientDto clientDto) {
-        if(clientDto == null) return null;
-        Client client = new Client();
-        client.setId(clientDto.getId());
-        client.setFirstName(clientDto.getFirstName());
-        client.setLastName(clientDto.getLastName());
-        client.setEmail(clientDto.getEmail());
-        return client;
+    // Map to transfer data from DTO → Entity
+    public static Client mapToClient(ClientDto clientDto) {
+        return new Client(
+                clientDto.getId(),
+                clientDto.getFirstName(),
+                clientDto.getLastName(),
+                clientDto.getEmail()
+        );
     }
 }
