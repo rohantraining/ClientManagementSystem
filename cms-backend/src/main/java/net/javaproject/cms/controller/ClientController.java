@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin("*") //all client can call CLient REST APIs since backend running on port 8080, React running on port 3000
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api/clients")

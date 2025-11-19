@@ -27,3 +27,7 @@ POSTMAN  -----> DTO --> C0NTROLLER LAYER --> SERVICE LAYER --> REPOSITORY LAYER
 
 7)ClientServiceImpl-
 @service-tells springcontainer to create spring bean for this class
+
+8)CORS issue(Cross-Origin Resource Sharing) in ClientController as 
+UI -react running on port 3000
+Backend -java running on port 8080
