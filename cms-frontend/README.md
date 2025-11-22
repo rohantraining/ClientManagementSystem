@@ -27,9 +27,11 @@ go inside folder, and then -->
 7) install bootstrap:- npm install bootstrap --save
 8) USING react ListClient component
 9) type rfce(react function component export), rafc(react arrow function component export)
-10) search on google- bootstrap 5 container, table, navbar,button, cards
+10) search on google- bootstrap 5 container, table, navbar,button, cards, validation
 7) axios libray-AXIOS API
 8) useStateHook- allows to use state variable in function component- [setvariable, functiona that updates state variable]
 9) useEffect Hook - callback arrow function and dependency list(empty array)-promise object used in .then method
 10) npm install react-router-dom --save  --ROUTING PURPOSE
 11) Inside ListClientComponent class- clients.map(client =>)  //clients hold response of REST API call
+12) ... erros means = spreasd operator(in clientcomponent.jsx file)
+13) form validation feature, add client feature, update client feature

@@ -14,10 +14,15 @@ function App() {
         <Routes> {/* Routes=component/parent */}
           {/* // http://localhost:3000 */}
           <Route path='/' element= { <ListClientComponent/>}></Route>
+          
           {/* // http://localhost:3000/clients */}
           <Route path='/clients' element= { <ListClientComponent/>}></Route>
+          
           {/* // http://localhost:3000/clients */}
           <Route path='/add-client' element={<ClientComponent/>}></Route>
+
+          {/* // http://localhost:3000/edit-client/1 */}
+          <Route path='/edit-client/:id' element={<ClientComponent/>}></Route>
         </Routes>
       <FooterComponent />
     </BrowserRouter>
